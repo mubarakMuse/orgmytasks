@@ -46,10 +46,10 @@ const App = () => {
       });
     }
   };
-  
-// eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     handleOrganizeTasks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [buckets]);
 
   const handleBulkAddTasks = () => {
