@@ -46,7 +46,8 @@ const App = () => {
       });
     }
   };
-
+  
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     handleOrganizeTasks();
   }, [buckets]);
@@ -67,9 +68,6 @@ const App = () => {
   };
 
   const handleOrganizeTasks = () => {
-    const allTasks = Object.values(buckets).reduce((accumulator, bucket) => accumulator.concat(bucket), []);
-
-    const organizedTasks = allTasks.sort((a, b) => a.id - b.id);
 
     const organizedTaskList = Object.keys(buckets).map((bucketName) => {
       const tasksInBucket = buckets[bucketName];
